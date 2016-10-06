@@ -5,14 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Etsy Recreation</title>
     <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   </head>
   <body>
 
 
+   <header>
+
+         <img src="images/logo.png" alt="">
+
+         <form id="search-form" action="javascript:void(0);">
+            <input id="search" value="zine" type="text" placeholder="Search for items or shops">
+            <button id="search-button" type="submit">Search</button>
+         </form>
+
+         <ul class="account">
+            <li><a id="sell" href="#">Sell on Etsy</a></li>
+            <li><a id="register" href="#">Register</a></li>
+            <li><a id="login" href="#">Sign in</a></li>
+            <li><a id="cart" href="#"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i><span>Cart</span></a></li>
+         </ul>
+
+   </header>
+
+   <!-- <nav>
+      <ul>
+         <li><h3 class="nav-category">Clothing &amp; Accessories</h3></li>
+         <li><h3 class="nav-category">Jewelry</h3></li>
+         <li><h3 class="nav-category">Craft Supplies &amp; Tools</h3></li>
+         <li><h3 class="nav-category">Weddings</h3></li>
+         <li><h3 class="nav-category">Entertainment</h3></li>
+         <li><h3 class="nav-category">Home &amp; Living</h3></li>
+         <li><h3 class="nav-category">Kids &amp; Baby</h3></li>
+         <li><h3 class="nav-category">Vintage</h3></li>
+      </ul>
+   </nav> -->
+
+
+   <!--
+
+   <div class="side-bar">
+      <h5>Show results for:</h5>
+      <div class="side-panel">
+         <ul>
+            <li><a href="#">All Categories</a></li>
+            <li><a href="#">Books, Movies &amp; Music</a></li>
+            <li><a href="#">Art &amp; Collectibles</a></li>
+            <li><a href="#">Craft Supplies &amp; Tools</a></li>
+            <li><a href="#">Paper &amp; Party Supplies</a></li>
+            <li><a href="#">Weddings</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Home &amp; Living</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Bags &amp; Purses</a></li>
+            <li><a href="#">Electronics &amp; Accessories</a></li>
+            <li><a href="#">Toys &amp; Games</a></li>
+            <li><a href="#">Bath &amp; Beauty</a></li>
+            <li><a href="#">Pet Supplies</a></li>
+         </ul>
+      </div>
+      <h5>Refine your search</h5>
+      <div class="side-panel">
+         <div>
+            <span>Shop Location</span>
+            <label><input type="radio" name="location" value="anywhere">Anywhere</label>
+            <label><input type="radio" name="location" value="united-states">United States</label>
+            <span>Choose a custom location</span>
+         </div>
+         <hr>
+         <div>
+            <span>Item Type</span>
+            <label><input type="radio" name="item-type" value="all-items">All Items</label>
+            <label><input type="radio" name="item-type" value="handmade">Handmade</label>
+            <label><input type="radio" name="item-type" value="vintage">Vintage</label>
+         </div>
+         <hr>
+         <div>
+            <span>Price ($)</span>
+            <label><input type="radio" name="price" value="any">Any price</label>
+            <label><input type="radio" name="price" value="under-25">Under $25</label>
+            <label><input type="radio" name="price" value="25-50">$25 to $50</label>
+            <label><input type="radio" name="price" value="50-100">$50 to $100</label>
+            <label><input type="radio" name="price" value="over-100">Over $100</label>
+
+         </div>
+         <div>
+            <span>Filter by color</span>
+            <ul class="color-filters">
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+            </ul>
+
+      </div>
 
 
 
-   <!-- <script id="" type="text/x-handlebars-template"> -->
+   </div>
+
+ -->
+
+
+
+<div class="item-container">
+   <div class="results-info">
+      <div class="results-category">
+         <a href="#">All categories</a>
+         <i class="fa fa-chevron-right"></i>
+         <span>“zine”</span><span class="sm-hide">(28,628 Results)</span>
+      </div>
+      <div class="results-sort">Sort by:
+         <a href="#">Relevancy
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+         </a>
+      </div>
+   </div>
+
+   <div class="flex-grid">
+   </div>
+</div>
+
+<script id="flex-stamp" type="text/x-handlebars-template">
+   <div class="flex-item">
+      <a href="{{url}}">
+         <div class="card">
+            <img class="card-img" src="{{image}}" alt="">
+            <div class="card-meta">
+              <div class="card-title">{{title}}</div>
+              <div class="card-row">
+                 <div class="shop"><a href="{{shop.url}}">{{shop.name}}</a></div>
+                 <div class="price">${{price}}</div>
+              </div>
+            </div>
+  		   </div>
+      </a>
+  </div>
+
+
+</script>
 
     <script src="js/bundle.js"></script>
   </body>
