@@ -2,8 +2,8 @@
 
 $gutter: 9px; //actually half width :/
 $l-media: 1100px; // for media query
-$m-media: 860px;
-$s-media: 600px;
+$m-media: 896px;
+$s-media: 696px;
 
 
 *,
@@ -153,7 +153,8 @@ nav{
 
 section.main-container{
    display: flex;
-   flex-flow: row wrap;
+   flex-flow: row nowrap;
+   overflow: hidden;
    align-items: flex-start;
 
       background-color:#F5F5F1;
@@ -161,14 +162,16 @@ section.main-container{
    font-size: 13px;
 
    .side-bar{
-      flex: 0 0 250px;
-      width:250px;
-      padding-left: 18px;
+      flex: 0 0 286px;
+      width:286px;
+      padding-left: 33px;
       padding-right: 18px;
+      padding-top: 18px;
 
       h5{
          font-size: 13px;
          font-weight: bold;
+         padding-bottom: 6px;
       }
       .side-panel{
           border-radius: 3px;
@@ -177,6 +180,8 @@ section.main-container{
           border-bottom-color: #CBCCC9;
           margin: 0 0 12px;
           ul{
+             padding-top: 10px;
+             padding-bottom: 8px;
              list-style: none;
              li{
                padding-bottom: 6px;
@@ -186,6 +191,60 @@ section.main-container{
                 }
              }
           }
+       }
+       .refine{
+          display:flex;
+          flex-flow: column nowrap;
+          padding: 10px 12px;
+
+          .panel-group{
+             display:flex;
+             flex-flow: column nowrap;
+             padding-bottom: 18px;
+             margin-bottom: 18px;
+             border-bottom: 1px solid #E1E3DF;
+
+             &:last-child{
+                border-bottom-color: transparent;
+                margin-bottom:0;
+             }
+
+
+              span{
+                  font-weight: bold;
+                  padding-bottom: 4px;
+              }
+
+              .radio-item{
+                 //padding: 10px 8px;
+                 padding-bottom: 3px;
+                 padding-left: 3px;
+              }
+               a{
+                  color: #0192B5;
+                  &:hover{
+                     text-decoration: underline;
+                  }
+               }
+
+              label{
+                 color: #0192B5;
+                 padding-left: 5px;
+                 cursor: pointer;
+                 &:hover{
+                    text-decoration: underline;
+                 }
+              }
+          }
+
+          input[type=radio]{
+             cursor: pointer;
+
+          &:checked + label {
+               font-weight:bold;
+             color:black;
+            }
+         }
        }
    }
 
@@ -211,7 +270,7 @@ section.main-container{
 
    min-width: 0;
    max-width:75%;
-   width: calc(100% - 250px);
+   width: calc(100% - 286px);
 
 }
 
