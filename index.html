@@ -66,29 +66,74 @@
                <li><a href="#">Pet Supplies</a></li>
             </ul>
          </div>
+
          <h5>Refine your search</h5>
-         <div class="side-panel">
-            <div>
+         <div class="side-panel refine">
+
+            <div class="panel-group">
                <span>Shop Location</span>
-               <label><input type="radio" name="location" value="anywhere">Anywhere</label>
-               <label><input type="radio" name="location" value="united-states">United States</label>
-               <span>Choose a custom location</span>
+
+               <div class="radio-item">
+                  <input type="radio" name="location" value="anywhere" id="anywhere" checked="checked">
+                  <label for="anywhere">Anywhere</label>
+               </div>
+
+               <div class="radio-item">
+               <input type="radio" name="location" value="united-states" id="united-states">
+               <label for="united-states">United States</label>
+               </div>
+               <a>Choose a custom location</a>
             </div>
-            <hr>
-            <div>
+
+
+            <div class="panel-group">
+
                <span>Item Type</span>
-               <label><input type="radio" name="item-type" value="all-items">All Items</label>
-               <label><input type="radio" name="item-type" value="handmade">Handmade</label>
-               <label><input type="radio" name="item-type" value="vintage">Vintage</label>
+
+               <div class="radio-item">
+                  <input type="radio" name="item-type" value="all-items" id="all-items" checked="checked">
+                  <label for="all-items">All Items</label>
+               </div>
+
+               <div class="radio-item">
+                  <input type="radio" name="item-type" value="handmade" id="handmade">
+                  <label for="handmade">Handmade</label>
+               </div>
+
+               <div class="radio-item">
+                  <input type="radio" name="item-type" value="vintage" id="vintage">
+                  <label for=vintage>Vintage</label>
+               </div>
+
             </div>
-            <hr>
-            <div>
+
+            <div class="panel-group">
                <span>Price ($)</span>
-               <label><input type="radio" name="price" value="any">Any price</label>
-               <label><input type="radio" name="price" value="under-25">Under $25</label>
-               <label><input type="radio" name="price" value="25-50">$25 to $50</label>
-               <label><input type="radio" name="price" value="50-100">$50 to $100</label>
-               <label><input type="radio" name="price" value="over-100">Over $100</label>
+
+               <div class="radio-item">
+                  <input type="radio" name="price" value="any" id="any" checked="checked">
+                  <label for="any">Any price</label>
+               </div>
+
+               <div class="radio-item">
+                  <input type="radio" name="price" value="under-25" id="under-25">
+                  <label for="under-25">Under $25</label>
+               </div>
+
+               <div class="radio-item">
+                  <input type="radio" name="price" value="25-50" id="25-50">
+                  <label for="25-50">$25 to $50</label>
+               </div>
+
+               <div class="radio-item">
+                  <input type="radio" name="price" value="50-100" id="50-100">
+                  <label for="50-100">$50 to $100</label>
+               </div>
+
+               <div class="radio-item">
+                  <input type="radio" name="price" value="over-100" id="over-100">
+                  <label for="over-100">Over $100</label>
+               </div>
             </div>
             <!-- <div>
                <span>Filter by color</span>
@@ -103,9 +148,10 @@
                   <li></li>
                </ul>
          </div> -->
+         </div>
       </div>
 
-</div>
+
       <div class="item-container">
       <div class="results-info">
          <div class="results-category">

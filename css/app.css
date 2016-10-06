@@ -143,8 +143,9 @@ section.main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  overflow: hidden;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -152,14 +153,16 @@ section.main-container {
   font-size: 13px; }
   section.main-container .side-bar {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 250px;
-            flex: 0 0 250px;
-    width: 250px;
-    padding-left: 18px;
-    padding-right: 18px; }
+        -ms-flex: 0 0 286px;
+            flex: 0 0 286px;
+    width: 286px;
+    padding-left: 33px;
+    padding-right: 18px;
+    padding-top: 18px; }
     section.main-container .side-bar h5 {
       font-size: 13px;
-      font-weight: bold; }
+      font-weight: bold;
+      padding-bottom: 6px; }
     section.main-container .side-bar .side-panel {
       border-radius: 3px;
       background-color: white;
@@ -167,17 +170,59 @@ section.main-container {
       border-bottom-color: #CBCCC9;
       margin: 0 0 12px; }
       section.main-container .side-bar .side-panel ul {
+        padding-top: 10px;
+        padding-bottom: 8px;
         list-style: none; }
         section.main-container .side-bar .side-panel ul li {
           padding-bottom: 6px;
           padding-left: 12px; }
           section.main-container .side-bar .side-panel ul li a {
             color: #0192B5; }
+    section.main-container .side-bar .refine {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+      padding: 10px 12px; }
+      section.main-container .side-bar .refine .panel-group {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+        border-bottom: 1px solid #E1E3DF; }
+        section.main-container .side-bar .refine .panel-group:last-child {
+          border-bottom-color: transparent;
+          margin-bottom: 0; }
+        section.main-container .side-bar .refine .panel-group span {
+          font-weight: bold;
+          padding-bottom: 4px; }
+        section.main-container .side-bar .refine .panel-group .radio-item {
+          padding-bottom: 3px;
+          padding-left: 3px; }
+        section.main-container .side-bar .refine .panel-group a {
+          color: #0192B5; }
+          section.main-container .side-bar .refine .panel-group a:hover {
+            text-decoration: underline; }
+        section.main-container .side-bar .refine .panel-group label {
+          color: #0192B5;
+          padding-left: 5px;
+          cursor: pointer; }
+          section.main-container .side-bar .refine .panel-group label:hover {
+            text-decoration: underline; }
+      section.main-container .side-bar .refine input[type=radio] {
+        cursor: pointer; }
+        section.main-container .side-bar .refine input[type=radio]:checked + label {
+          font-weight: bold;
+          color: black; }
 
 .item-container {
   min-width: 0;
   max-width: 75%;
-  width: calc(100% - 250px); }
+  width: calc(100% - 286px); }
 
 .sm-hide {
   display: none; }
@@ -234,7 +279,7 @@ section.main-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  @media (min-width: 600px) {
+  @media (min-width: 696px) {
     .flex-grid {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
@@ -252,11 +297,11 @@ section.main-container {
             justify-content: center;
     width: 100%;
     padding: 4px; }
-    @media (min-width: 600px) {
+    @media (min-width: 696px) {
       .flex-grid .flex-item {
         width: 50%;
         padding: 9px; } }
-    @media (min-width: 860px) {
+    @media (min-width: 896px) {
       .flex-grid .flex-item {
         width: 33.3%; } }
     @media (min-width: 1100px) {
@@ -270,7 +315,7 @@ section.main-container {
   border-radius: 2px;
   border: 1px solid #E1E3DF;
   border-bottom-color: #CBCCC9; }
-  @media (min-width: 600px) {
+  @media (min-width: 696px) {
     .card {
       margin-top: 0;
       width: 100%; } }
@@ -307,4 +352,5 @@ section.main-container {
           -ms-flex: 0 0 auto;
               flex: 0 0 auto;
       color: #78c042; }
+
 /*# sourceMappingURL=app.css.map */
