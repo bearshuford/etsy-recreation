@@ -43,17 +43,19 @@ var count = 16;
 
 
 
-
 var result = [];
 
 function logData(data) {
    console.log(data);
 
    for(var i=0; i<data.results.length; i++){
+      //unescape
+      var t = $(document.createElement('div'));
+      t.html(data.results[i].title);
       html = template(
          {
             'image': data.results[i].Images[0].url_170x135,
-            'title': data.results[i].title,
+            'title': t.text(),
             'price': data.results[i].price,
             'url':  data.results[i].url,
             'shop':
@@ -62,6 +64,7 @@ function logData(data) {
                   'url':  data.results[i].Shop.url
                }
          });
+
       $('.flex-grid').append(html);
 
    }

@@ -93,7 +93,11 @@ header{
          display: inline-block;
          padding: 0 12px;
          overflow:hidden;
-         a{color:#0192B5;}
+
+         a{
+            color:#0192B5;
+            font-size: 14px;
+         }
 
       // #login{
       //    width: 100%;
