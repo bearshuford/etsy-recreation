@@ -1,9 +1,9 @@
-
+@import "style";
 
 $gutter: 9px; //actually half width :/
 $l-media: 1100px; // for media query
-$m-media: 896px;
-$s-media: 696px;
+$m-media: 900px;
+$s-media: 600px;
 
 
 *,
@@ -17,6 +17,26 @@ $s-media: 696px;
 
 a{
    text-decoration: none;
+}
+
+a.bear-button{
+  display: inline-block;
+   position: fixed;
+   bottom: 29px;
+   right: 25px;
+   width: 56px;
+   height: 56px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  z-index: 20;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),
+              0 4px 8px rgba(0, 0, 0, 0.28);
+   outline: none;
+    text-align: center;
+    padding-top: 15px;
+
 }
 
 img {
@@ -166,11 +186,16 @@ section.main-container{
    font-size: 13px;
 
    .side-bar{
-      flex: 0 0 286px;
-      width:286px;
+      flex: 0 0 240px;
+      width:240px;
       padding-left: 33px;
       padding-right: 18px;
       padding-top: 18px;
+
+      @media(min-width: $s-media){
+         flex: 0 0 286px;
+         width:286px;
+      }
 
       h5{
          font-size: 13px;
@@ -269,13 +294,22 @@ section.main-container{
 
 .item-container{
 
+padding-right: 16px;
+
+   @media(min-width: $m-media){
+   padding-right: 22px;
+}
    //flex-grow:1;
    // flex-shrink: 1;
 
    min-width: 0;
    max-width:75%;
-   width: calc(100% - 286px);
 
+   width: calc(100% - 240px);
+
+   @media(min-width: $m-media){
+      width: calc(100% - 286px);
+   }
 }
 
 

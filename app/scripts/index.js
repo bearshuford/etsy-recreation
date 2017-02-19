@@ -2,57 +2,21 @@ var $ = require('jQuery');
 var _ = require('underscore');
 var handlebars = require('handlebars');
 
-// var source   = $('#photo-album').html();
-// var template = handlebars.compile(source);
-//
-// var context = {};
-//
-// $('#album-container').html(template(context));
-// $('#album-container').append(template());
-
-
-
-
-
-
-
 var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=zine&includes=Images,Shop&sort_on=score"
 
 
 
 
-var source   = $("#flex-stamp").html();
-var template = handlebars.compile(source);
-var html;
-
-var context = [];
-var count = 16;
-// for(var i=0; i<count; i++){
-//
-//   var card = {
-//     'image': 'https://placecage.com/'+(340+(i*2))+'/'+(270+i)
-//   }
-//
-//   context.push(card) ;
-// }
-//
-// context.forEach(function(card){
-//   html = template(card);
-//   $('.flex-grid').append(html);
-// });
-
-
-
-var result = [];
-
 function logData(data) {
    console.log(data);
 
    for(var i=0; i<data.results.length; i++){
-      //unescape
+      var template = handlebars.compile($("#flex-stamp").html());
+
       var t = $(document.createElement('div'));
       t.html(data.results[i].title);
-      html = template(
+
+      $('.flex-grid').append(template(
          {
             'image': data.results[i].Images[0].url_170x135,
             'title': t.text(),
@@ -63,21 +27,10 @@ function logData(data) {
                   'name': data.results[i].Shop.shop_name,
                   'url':  data.results[i].Shop.url
                }
-         });
-
-      $('.flex-grid').append(html);
-
+         }
+      ));
    }
 }
-
-
-
-// result.forEach(function(card){
-//    console.log("Card:"+card);
-//    console.log(template(card));
-//   html = template(card);
-//   $('.flex-grid').append(html);
-// });
 
 fetchJSONP(url, logData);
 
